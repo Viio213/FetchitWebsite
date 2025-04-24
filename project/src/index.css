@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('/fonts.css');
+
+@layer base {
+  body {
+    @apply font-body text-gray-800 bg-offwhite;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-all duration-300 inline-flex items-center gap-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-light;
+  }
+  
+  .btn-secondary {
+    @apply bg-dark text-white hover:bg-dark/90;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Variants Classes */
+.variant-energetic {
+  --bg-color: theme('colors.primary.light');
+  --accent-color: theme('colors.primary.DEFAULT');
+}
+
+.variant-balanced {
+  --bg-color: theme('colors.dark.DEFAULT');
+  --accent-color: theme('colors.primary.DEFAULT');
+}
+
+.variant-soft {
+  --bg-color: theme('colors.offwhite.DEFAULT');
+  --accent-color: theme('colors.primary.light');
+}

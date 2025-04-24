@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Optimizations for search engines
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg
+
+# Sitemaps
+Sitemap: https://fetchit.fr/sitemap.xml
